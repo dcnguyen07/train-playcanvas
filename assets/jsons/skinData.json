@@ -1,0 +1,578 @@
+[
+  {
+    "id" : "skin_01",
+    "model": "model_car_01",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.318, 0.176, -0.56]
+      },
+      "FR": {
+        "position": [0.318, 0.176, -0.56]
+      },
+      "BL": {
+        "position": [-0.318, 0.176,0.485]
+      },
+      "BR": {
+        "position": [0.318, 0.176, 0.485]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.191, 0.911]
+    },
+    "backLight": {
+      "position": [0, 0.4, 0.797],
+      "scale": [0.7, 0.7 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.42, -0.54]
+    },
+    "collision" : {
+      "position": [0, 0.603, 0],
+      "halfExtents" : [0.45, 0.2, 0.83]
+    }
+  },
+  {
+    "id" : "skin_02",
+    "model": "model_car_02",
+    "wheelsData": {
+       "FL": {
+         "position": [-0.412, 0.176, -0.471]
+       },
+       "FR": {
+          "position": [0.383, 0.176, -0.461]
+       },
+        "BL": {
+            "position": [-0.412, 0.176, 0.49]
+        },
+        "BR": {
+          "position": [0.383, 0.176, 0.49]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.25, 1]
+    },
+    "backLight": {
+      "position": [0, 0.3, 0.911],
+      "scale": [0.7, 0.7 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.42, -0.2]
+    },
+    "collision" : {
+      "position": [0, 0.553, 0],
+      "halfExtents" : [0.45, 0.4, 0.83]
+    }
+  },
+  {
+    "id" : "skin_03",
+    "model": "model_car_03",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.355, 0.176, -0.828]
+      },
+      "FR": {
+        "position": [0.355, 0.176, -0.828]
+      },
+      "BL": {
+        "position": [-0.355, 0.176, 0.341]
+      },
+      "BR": {
+        "position": [0.355, 0.176, 0.341]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.1, 1.25]
+    },
+    "backLight": {
+      "position": [0.016, 0.263, 0.806],
+      "scale": [1, 1 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.42, -0.7]
+    },
+    "collision" : {
+      "position": [0, 0.664, 0],
+      "halfExtents" : [0.45, 0.336, 1.1]
+    }
+  },
+  {
+    "id" : "skin_04",
+    "model": "model_car_04",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.456, 0.176, -0.446]
+      },
+      "FR": {
+        "position": [0.456,  0.176, -0.446]
+      },
+      "BL": {
+        "position": [-0.449, 0.176, 0.407]
+      },
+      "BR": {
+        "position": [0.449, 0.176, 0.407]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.4, 0.7]
+    },
+    "backLight": {
+      "position": [0, 0.308, 0.809],
+      "scale": [1, 1 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.42, -0.2]
+    },
+    "collision" : {
+      "position": [0, 0.641, 0],
+      "halfExtents" : [0.55, 0.259, 0.754]
+    }
+  },
+  {
+    "id" : "skin_05",
+    "model": "model_car_05",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.456, 0.176, -0.446]
+      },
+      "FR": {
+        "position": [0.456,  0.176, -0.446]
+      },
+      "BL": {
+        "position": [-0.449, 0.176, 0.407]
+      },
+      "BR": {
+        "position": [0.449, 0.176, 0.407]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.2, 0.9]
+    },
+    "backLight": {
+      "position": [0, 0.336, 0.954],
+      "scale": [1, 1 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.42, -0.3]
+    },
+    "collision" : {
+      "position": [0, 0.641, 0],
+      "halfExtents" : [0.55, 0.259, 0.754]
+    }
+  },
+  {
+    "id" : "skin_06",
+    "model": "model_car_06",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.412, 0.176, -0.421]
+      },
+      "FR": {
+        "position": [0.383, 0.176, -0.421]
+      },
+      "BL": {
+        "position": [-0.412, 0.176, 0.608]
+      },
+      "BR": {
+        "position": [0.383, 0.176, 0.608]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.1, 1.1]
+    },
+    "backLight": {
+      "position": [0, 0.398, 0.825],
+      "scale": [0.96, 1 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.42, -0.35]
+    },
+    "collision" : {
+      "position": [0, 0.71, 0.125],
+      "halfExtents" : [0.55, 0.315, 0.9]
+    }
+  },
+  {
+    "id" : "skin_07",
+    "model": "model_car_07",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.412, 0.176, -0.373]
+      },
+      "FR": {
+        "position": [0.383, 0.176, -0.373]
+      },
+      "BL": {
+        "position": [-0.412, 0.176, 0.836]
+      },
+      "BR": {
+        "position": [0.383, 0.176, 0.836]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.1, 1.2]
+    },
+    "backLight": {
+      "position": [0, 0.386, 0.883],
+      "scale": [1, 1 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.42, -0.4]
+    },
+    "collision" : {
+      "position": [0, 0.645, 0.125],
+      "halfExtents" : [0.55, 0.264, 1]
+    }
+  },
+  {
+    "id" : "skin_08",
+    "model": "model_car_08",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.412, 0.176, -0.485]
+      },
+      "FR": {
+        "position": [0.383, 0.176, -0.485]
+      },
+      "BL": {
+        "position": [-0.412, 0.176, 0.651]
+      },
+      "BR": {
+        "position": [0.383, 0.176, 0.651]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.135, 1.1]
+    },
+    "backLight": {
+      "position": [0, 0.319, 0.988],
+      "scale": [1, 1 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.3, -0.4]
+    },
+    "collision" : {
+      "position": [0, 0.399, 0.055],
+      "halfExtents" : [0.55, 0.096, 0.9]
+    }
+  },
+  {
+    "id" : "skin_09",
+    "model": "model_car_09",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.412, 0.176, -0.434]
+      },
+      "FR": {
+        "position": [0.383, 0.176, -0.434]
+      },
+      "BL": {
+        "position": [-0.412, 0.176, 0.706]
+      },
+      "BR": {
+        "position": [0.383, 0.176, 0.706]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.135, 1.1]
+    },
+    "backLight": {
+      "position": [0, 0.283, 0.74],
+      "scale": [1, 1 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.3, -0.4]
+    },
+    "collision" : {
+      "position": [0, 0.422, 0.055],
+      "halfExtents" : [0.55, 0.114, 0.9]
+    }
+  },
+  {
+    "id" : "skin_10",
+    "model": "model_car_10",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.412, 0.176, -0.744]
+      },
+      "FR": {
+        "position": [0.383, 0.176, -0.744]
+      },
+      "BL": {
+        "position": [-0.412, 0.176, 0.535]
+      },
+      "BR": {
+        "position": [0.383, 0.176, 0.535]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.1, 1]
+    },
+    "backLight": {
+      "position": [0, 0.25, 0.765],
+      "scale": [0.7, 0.7 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.3, -0.9]
+    },
+    "collision" : {
+      "position": [0, 0.829, 0.055],
+      "halfExtents" : [0.5, 0.404, 1]
+    }
+  },
+  {
+    "id" : "skin_11",
+    "model": "model_car_11",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.259, 0.176, -0.494]
+      },
+      "FR": {
+        "position": [0.259, 0.176, -0.494]
+      },
+      "BL": {
+        "position": [-0.259, 0.176, 0.429]
+      },
+      "BR": {
+        "position": [0.259, 0.176, 0.429]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.13, 0.8]
+    },
+    "backLight": {
+      "position": [0, 0.26, 1.027],
+      "scale": [1.15, 1 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.3, -0.5]
+    },
+    "collision" : {
+      "position": [0, 0.337, -0.033],
+      "halfExtents" : [0.35, 0.117, 0.8]
+    }
+  },
+  {
+    "id" : "skin_12",
+    "model": "model_car_12",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.259, 0.176, -0.494]
+      },
+      "FR": {
+        "position": [0.259, 0.176, -0.494]
+      },
+      "BL": {
+        "position": [-0.259, 0.176, 0.598]
+      },
+      "BR": {
+        "position": [0.259, 0.176, 0.598]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.135, 1.1]
+    },
+    "backLight": {
+      "position": [0, 0.667, 0.598],
+      "scale": [0.7, 0.7 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.3, -0.7]
+    },
+    "collision" : {
+      "position": [0, 0.565, 0.055],
+      "halfExtents" : [0.39, 0.273, 0.9]
+    }
+  },
+  {
+    "id" : "skin_13",
+    "model": "model_car_13",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.349, 0.176, -0.652]
+      },
+      "FR": {
+        "position": [0.349, 0.176, -0.652]
+      },
+      "BL": {
+        "position": [-0.349, 0.176, 0.575]
+      },
+      "BR": {
+        "position": [0.349, 0.176, 0.575]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.135, 0.95]
+    },
+    "backLight": {
+      "position": [0, 0.603, 0.827],
+      "scale": [0.5, 0.7 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.3, -0.303]
+    },
+    "collision" : {
+      "position": [0, 0.422, -0.051],
+      "halfExtents" : [0.55, 0.114, 0.94]
+    }
+  },
+  {
+    "id" : "skin_14",
+    "model": "model_car_14",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.317, 0.176, -0.579]
+      },
+      "FR": {
+        "position": [0.317, 0.176, -0.579]
+      },
+      "BL": {
+        "position": [-0.317, 0.176, 0.523]
+      },
+      "BR": {
+        "position": [0.317, 0.176, 0.523]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.135, 1.069]
+    },
+    "backLight": {
+      "position": [0, 0.436, 1.028],
+      "scale": [1.25, 1.2 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.3, -0.508]
+    },
+    "collision" : {
+      "position": [0, 0.379, 0.004],
+      "halfExtents" : [0.55, 0.12, 0.9]
+    }
+  },
+  {
+    "id" : "skin_15",
+    "model": "model_car_15",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.317, 0.176, -0.569]
+      },
+      "FR": {
+        "position": [0.317, 0.176, -0.569]
+      },
+      "BL": {
+        "position": [-0.317, 0.176, 0.533]
+      },
+      "BR": {
+        "position": [0.317, 0.176, 0.533]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.135, 1]
+    },
+    "backLight": {
+      "position": [0, 0.325, 1.185],
+      "scale": [0.65, 0.5 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.3, -0.508]
+    },
+    "collision" : {
+      "position": [0, 0.406, 0.004],
+      "halfExtents" : [0.55, 0.166, 0.9]
+    }
+  },
+  {
+    "id" : "skin_16",
+    "model": "model_car_16",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.329, 0.141, -0.614]
+      },
+      "FR": {
+        "position": [0.329, 0.141, -0.614]
+      },
+      "BL": {
+        "position": [-0.329, 0.141, 0.472]
+      },
+      "BR": {
+        "position": [0.329, 0.141, 0.472]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.135, 0.973]
+    },
+    "backLight": {
+      "position": [0, 0.35, 0.956],
+      "scale": [1, 1 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.3, -0.529]
+    },
+    "collision" : {
+      "position": [0, 0.484, -0.051],
+      "halfExtents" : [0.55, 0.234, 0.94]
+    }
+  },
+  {
+    "id" : "skin_17",
+    "model": "model_car_17",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.371, 0.201, -0.591]
+      },
+      "FR": {
+        "position": [0.371, 0.201, -0.591]
+      },
+      "BL": {
+        "position": [-0.371, 0.201, 0.506]
+      },
+      "BR": {
+        "position": [0.371, 0.201, 0.506]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.248, 0.938]
+    },
+    "backLight": {
+      "position": [0, 0.26, 0.983],
+      "scale": [0.65, 0.5 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.3, -0.548]
+    },
+    "collision" : {
+      "position": [0, 0.307, -0.025],
+      "halfExtents" : [0.55, 0.098, 0.966]
+    }
+  },
+  {
+    "id" : "skin_18",
+    "model": "model_car_18",
+    "wheelsData": {
+      "FL": {
+        "position": [-0.371, 0.193, -0.591]
+      },
+      "FR": {
+        "position": [0.371, 0.193, -0.591]
+      },
+      "BL": {
+        "position": [-0.371, 0.193, 0.614]
+      },
+      "BR": {
+        "position": [0.371, 0.193, 0.614]
+      }
+    },
+    "smoke" : {
+      "position": [0, 0.248, 1.051]
+    },
+    "backLight": {
+      "position": [0, 0.248, 1.006],
+      "scale": [1.2, 1.2 ,1]
+    },
+    "headLight": {
+      "position": [0, 0.3, -0.548]
+    },
+    "collision" : {
+      "position": [0, 0.307, -0.025],
+      "halfExtents" : [0.55, 0.098, 0.966]
+    }
+  }
+]

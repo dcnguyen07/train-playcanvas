@@ -1,0 +1,43 @@
+{
+  "license": "",
+  "name": "traffic-run-h5",
+  "type": "module",
+  "scripts": {
+    "start": "vite serve --host",
+    "build-dev": "vite build --config vite.config-dev.js --base ./",
+    "build-production": "tsc && vite build --config vite.config.js  --base ./",
+    "build-data": "node ./scripts/buildData/index.js --free-texture-packer",
+    "build-data-production": "node ./scripts/buildData/index.js --clean",
+    "build-data-removeWasm": "node ./scripts/buildData/index.js --free-texture-packer --removeWasm true",
+    "build-data-production-removeWasm": "node ./scripts/buildData/index.js --clean --removeWasm true",
+    "extract-assets": "node ./scripts/buildData/extractAssets.js"
+  },
+  "dependencies": {
+    "@tweenjs/tween.js": "^21.0.0",
+    "@types/howler": "^2.2.11",
+    "@types/js-yaml": "^4.0.9",
+    "@types/mustache": "^4.2.5",
+    "howler": "^2.2.4",
+    "js-yaml": "^4.1.0",
+    "playcanvas": "^1.67.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "command-exists": "^1.2.9",
+    "eslint": "^8.55.0",
+    "folder-hash": "^4.0.4",
+    "free-tex-packer-core": "^0.3.4",
+    "fs-extra": "^11.2.0",
+    "imagemin": "^8.0.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vite-plugin-static-copy": "^1.0.1",
+    "yargs": "^17.7.2",
+    "yauzl": "^3.1.2"
+  }
+}

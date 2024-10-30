@@ -1,0 +1,113 @@
+[
+  {
+    "type": "sequence",
+    "name": "shop_tutorial",
+    "actions": [
+      {
+        "type": "trackScreenElement",
+        "layerName": "UIMainLayer",
+        "screen": "HomeScreen",
+        "element": "buttonShop",
+        "hand": {
+          "angle": 0,
+          "x": 0,
+          "scale": 0.1,
+          "offsetX": -50,
+          "offsetY": 75
+        },
+        "focus": {
+          "shape": "square",
+          "width": 1.8,
+          "height": 1.9
+        },
+        "message": {
+          "text": "open-shop",
+          "anchor": {
+            "x": 0
+          },
+          "offsetX": 375,
+          "offsetY": 75,
+          "distance": 180
+        },
+        "saveProgress": false
+      },
+      {
+        "type": "trackScreenElement",
+        "layerName": "UIMainLayer",
+        "screen": "ShopScreen",
+        "element": "fake-point-tutorial",
+        "hand": {
+          "angle": 0,
+          "x": 0,
+          "scale": -0.5,
+          "offsetX": -20,
+          "offsetY": 100
+        },
+        "focus": {
+          "shape": "square",
+          "width": 1.8,
+          "height": 1.8
+        },
+        "message": {
+          "text": "click-to-skin",
+          "anchor": {
+            "x": 0
+          },
+          "offsetX": 90,
+          "offsetY": -35,
+          "distance": 260
+        },
+        "saveProgress": false
+      },
+      {
+        "type": "trackScreenElement",
+        "layerName": "UIMainLayer",
+        "screen": "ShopScreen",
+        "element": "buy-by-coin",
+        "hand": {
+          "angle": -90,
+          "x": 0,
+          "scale": -0.5,
+          "offsetX": 150,
+          "offsetY": 30
+        },
+        "focus": {
+          "shape": "square",
+          "width": 500,
+          "height": 500
+        },
+        "message": {
+          "text": "click-to-buy",
+          "anchor": {
+            "x": 0
+          },
+          "offsetX": 90,
+          "offsetY": 70,
+          "distance": 270
+        },
+        "blockInput": false,
+        "saveProgress": false
+      }
+    ],
+    "unlockConditions": [
+      {
+        "type": "localStorage",
+        "key": "currency",
+        "value": 100,
+        "operator": ">="
+      },
+      {
+        "type": "localStorageArray",
+        "key": "skin_unlocked",
+        "value": "skin_02",
+        "operator": "!="
+      },
+      {
+        "type": "activeScreen",
+        "layerName": "UIMainLayer",
+        "screenName": "HomeScreen",
+        "isEnable": true
+      }
+    ]
+  }
+]

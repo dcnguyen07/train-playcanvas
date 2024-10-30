@@ -1,0 +1,127 @@
+[
+    {
+        "displayName": "English",
+        "name": "English",
+        "code": "en",
+        "flag": "spr_flag_england"
+    },
+    {
+        "displayName": "عربي",
+        "name": "Arabic",
+        "code": "ar",
+        "font": "NotoSansArabic-Black",
+        "flag": "spr_flag_united_arab_emirates"
+    },
+    {
+        "displayName": "中文",
+        "name": "Chinese",
+        "code": "zh",
+        "font": "NotoSansSC-Black",
+        "flag": "spr_flag_china"
+    },
+    {
+        "displayName": "Deutsch",
+        "name": "German",
+        "code": "de",
+        "flag": "spr_flag_germany"
+    },
+    {
+        "displayName": "Dutch",
+        "name": "Nederlands",
+        "code": "nl",
+        "flag": "spr_flag_netherlands"
+    },
+    {
+        "displayName": "Español",
+        "name": "Spanish",
+        "code": "es",
+        "flag": "spr_flag_spain"
+    },
+    {
+        "displayName": "Français",
+        "name": "French",
+        "code": "fr",
+        "flag": "spr_flag_france"
+    },
+    {
+        "displayName": "हिन्दी",
+        "name": "Hindi",
+        "code": "hi",
+        "flag": "spr_flag_india"
+    },
+    {
+        "displayName": "Bahasa Indonesia",
+        "name": "Indonesian",
+        "code": "id",
+        "flag": "spr_flag_indonesia"
+    },
+    {
+        "displayName": "Italiano",
+        "name": "Italian",
+        "code": "it",
+        "flag": "spr_flag_italy"
+    },
+    {
+        "displayName": "日本語",
+        "name": "Japanese",
+        "code": "ja",
+        "font": "NotoSansJP-Black",
+        "flag": "spr_flag_japan"
+    },
+    {
+        "displayName": "한국어",
+        "name": "Korean",
+        "code": "ko",
+        "font": "NotoSansKR-Black",
+        "flag": "spr_flag_south_korea"
+    },
+    {
+        "displayName": "Polski",
+        "name": "Polish",
+        "code": "pl",
+        "flag": "spr_flag_polish"
+    },
+    {
+        "displayName": "Português",
+        "name": "Portuguese",
+        "code": "pt",
+        "flag": "spr_flag_portugal"
+    },
+    {
+        "displayName": "Română",
+        "name": "Romanian",
+        "code": "ro",
+        "flag": "spr_flag_romania"
+    },
+    {
+        "displayName": "Русский",
+        "name": "Russian",
+        "code": "ru",
+        "flag": "spr_flag_russia"
+    },
+    {
+        "displayName": "Svenska",
+        "name": "Swedish",
+        "code": "sv",
+        "flag": "spr_flag_sweden"
+    },
+    {
+        "displayName": "Tiếng Việt",
+        "name": "Vietnamese",
+        "code": "vi",
+        "flag": "spr_flag_vietnam"
+    },
+    {
+        "displayName": "Türkçe",
+        "name": "Turkish",
+        "code": "tr",
+        "flag": "spr_flag_turkey"
+    },
+    {
+        "displayName": "ไทย",
+        "name": "Thai",
+        "code": "th",
+        "font": "NotoSerifThai-Black",
+        "flag": "spr_flag_thailand"
+    }
+]

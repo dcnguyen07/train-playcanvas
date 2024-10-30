@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Level 1",
+    "mapData": "level_1.json"
+  },
+  {
+    "name": "Level 2",
+    "mapData": "level_2.json"
+  },
+  {
+    "name": "Level 3",
+    "mapData": "level_3.json"
+  },
+  {
+    "name": "Level 4",
+    "mapData": "level_4.json"
+  },
+  {
+    "name": "Level 5",
+    "mapData": "level_5.json"
+  },
+  {
+    "name": "Level 6",
+    "mapData": "level_6.json"
+  },
+  {
+    "name": "Level 7",
+    "mapData": "level_7.json"
+  },
+  {
+    "name": "Level 8",
+    "mapData": "level_8.json"
+  },
+  {
+    "name": "Level 9",
+    "mapData": "level_9.json"
+  },
+  {
+    "name": "Level 10",
+    "mapData": "level_10.json"
+  },
+  {
+    "name": "Level 11",
+    "mapData": "level_11.json"
+  },
+  {
+    "name": "Level 12",
+    "mapData": "level_12.json"
+  },
+  {
+    "name": "Level 13",
+    "mapData": "level_13.json"
+  },
+  {
+    "name": "Level 14",
+    "mapData": "level_14.json"
+  },
+  {
+    "name": "Level 15",
+    "mapData": "level_15.json"
+  },
+  {
+    "name": "Level 16",
+    "mapData": "level_16.json"
+  },
+  {
+    "name": "Level 17",
+    "mapData": "level_17.json"
+  },
+  {
+    "name": "Level 18",
+    "mapData": "level_18.json"
+  },
+  {
+    "name": "Level 19",
+    "mapData": "level_19.json"
+  },
+  {
+    "name": "Level 20",
+    "mapData": "level_20.json"
+  },
+  {
+    "name": "Level 21",
+    "mapData": "level_21.json"
+  },
+  {
+    "name": "Level 22",
+    "mapData": "level_22.json"
+  },
+  {
+    "name": "Level 23",
+    "mapData": "level_23.json"
+  },
+  {
+    "name": "Level 24",
+    "mapData": "level_24.json"
+  },
+  {
+    "name": "Level 25",
+    "mapData": "level_25.json"
+  },
+  {
+    "name": "Level 26",
+    "mapData": "level_26.json"
+  },
+  {
+    "name": "Level 27",
+    "mapData": "level_27.json"
+  },
+  {
+    "name": "Level 28",
+    "mapData": "level_28.json"
+  },
+  {
+    "name": "Level 29",
+    "mapData": "level_29.json"
+  },
+  {
+    "name": "Level 30",
+    "mapData": "level_30.json"
+  }
+]

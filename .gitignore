@@ -1,0 +1,9 @@
+.vscode
+.cache
+dist
+node_modules/
+.firebase
+.idea
+asset-zips
+.extract
+firebase-debug.log

@@ -1,0 +1,128 @@
+[
+  {
+    "name": "skin_01",
+    "iconSprite": "spr_icon_car_1",
+    "model": "model_car_01",
+    "price": 0,
+    "locked": false
+  },
+  {
+    "name": "skin_02",
+    "iconSprite": "spr_icon_car_2",
+    "model": "model_car_02",
+    "price": 100,
+    "locked": true
+  },
+  {
+    "name": "skin_03",
+    "iconSprite": "spr_icon_car_3",
+    "model": "model_car_03",
+    "price": 200,
+    "locked": true
+  },
+  {
+    "name": "skin_04",
+    "iconSprite": "spr_icon_car_4",
+    "model": "model_car_04",
+    "price": 300,
+    "locked": true
+  },
+  {
+    "name": "skin_05",
+    "iconSprite": "spr_icon_car_5",
+    "model": "model_car_05",
+    "price": 400,
+    "locked": true
+  },
+  {
+    "name": "skin_06",
+    "iconSprite": "spr_icon_car_6",
+    "model": "model_car_06",
+    "price": 500,
+    "locked": true
+  },
+  {
+    "name": "skin_07",
+    "iconSprite": "spr_icon_car_7",
+    "model": "model_car_07",
+    "price": 600,
+    "locked": true
+  },
+  {
+    "name": "skin_08",
+    "iconSprite": "spr_icon_car_8",
+    "model": "model_car_08",
+    "price": 700,
+    "locked": true
+  },
+  {
+    "name": "skin_09",
+    "iconSprite": "spr_icon_car_9",
+    "model": "model_car_09",
+    "price": 800,
+    "locked": true
+  },
+  {
+    "name": "skin_10",
+    "iconSprite": "spr_icon_car_10",
+    "model": "model_car_10",
+    "price": 900,
+    "locked": true
+  },
+  {
+    "name": "skin_11",
+    "iconSprite": "spr_icon_car_11",
+    "model": "model_car_11",
+    "price": 1000,
+    "locked": true
+  },
+  {
+    "name": "skin_12",
+    "iconSprite": "spr_icon_car_12",
+    "model": "model_car_12",
+    "price": 1100,
+    "locked": true
+  },
+  {
+    "name": "skin_13",
+    "iconSprite": "spr_icon_car_13",
+    "model": "model_car_13",
+    "price": 1200,
+    "locked": true
+  },
+  {
+    "name": "skin_14",
+    "iconSprite": "spr_icon_car_14",
+    "model": "model_car_14",
+    "price": 1300,
+    "locked": true
+  },
+  {
+    "name": "skin_15",
+    "iconSprite": "spr_icon_car_15",
+    "model": "model_car_15",
+    "price": 1400,
+    "locked": true
+  },
+  {
+    "name": "skin_16",
+    "iconSprite": "spr_icon_car_16",
+    "model": "model_car_16",
+    "price": 1500,
+    "locked": true
+  },
+  {
+    "name": "skin_17",
+    "iconSprite": "spr_icon_car_17",
+    "model": "model_car_17",
+    "price": 1600,
+    "locked": true
+  },
+  {
+    "name": "skin_18",
+    "iconSprite": "spr_icon_car_18",
+    "model": "model_car_18",
+    "price": 1700,
+    "locked": true
+  }
+]
