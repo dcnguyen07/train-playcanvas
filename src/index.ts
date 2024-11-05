@@ -8,11 +8,13 @@ import { log } from "playcanvas";
 import { Rotate } from "./h5-game/scripts/components/rotate";
 import { Hello } from "./hello";
 import { Editor } from "./editor";
+import { MiniStat } from "./miniStats";
 
 window.addEventListener("contextmenu", (e) => e.preventDefault());
 window.onload = () => {
   // Game.load();
   // Hello.load();
-  Editor.load();
+  // Editor.load();
+  MiniStat.load();
 };
 window.requestAnimationFrame = (cb) => setTimeout(cb, 1000 / GameConstant.TARGET_FPS);

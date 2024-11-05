@@ -118,12 +118,12 @@ import {
         clearColor: new Color(0.1, 0.1, 0.1),
         farClip: 1000,
       });
-      camera.setPosition(1, 1, 3);
+      camera.setPosition(0, 1, 10);
       this.app.root.addChild(camera);
   
       const light = new Entity("light");
       light.addComponent("light", { intensity: 1 });
-      light.setEulerAngles(0, 0, -60);
+      light.setEulerAngles(0, 0, 60);
       this.app.root.addChild(light);
   
       window.addEventListener("resize", () => this.resize());
