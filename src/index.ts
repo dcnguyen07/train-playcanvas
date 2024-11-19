@@ -4,17 +4,23 @@ import { Game } from "./game";
 
 import "./template/systems/overrides/playcanvas.d";
 import { GameConstant } from "./gameConstant";
-import { log } from "playcanvas";
+import { GamePads, log } from "playcanvas";
 import { Rotate } from "./h5-game/scripts/components/rotate";
-import { Hello } from "./hello";
-import { Editor } from "./editor";
-import { MiniStat } from "./miniStats";
+import { BoxSnake, Hello } from "./snake/box";
+import { Editor } from "./playcanvas/editor";
+import { MiniStat } from "./playcanvas/miniStats";
+import { SpineBoy } from "./playcanvas/spineboy";
+import { Gamepad } from "./playcanvas/gamepad";
+import { MultiApp } from "./playcanvas/multiapp";
 
 window.addEventListener("contextmenu", (e) => e.preventDefault());
 window.onload = () => {
   // Game.load();
-  // Hello.load();
+  BoxSnake.load();
   // Editor.load();
-  MiniStat.load();
+  // MiniStat.load();
+  // SpineBoy.load();
+  // Gamepad.load();
+  // MultiApp.load();
 };
 window.requestAnimationFrame = (cb) => setTimeout(cb, 1000 / GameConstant.TARGET_FPS);
