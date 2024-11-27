@@ -207,7 +207,7 @@ export class BoxSnake {
         } 
       });
       mouse.on("mousedown", (event) => {
-        if (event.button === 0) { 
+        if (event.button === MOUSEBUTTON_LEFT) {
             isMouseDown = true;
             mouseStartX = event.x;
             mouseStartY = event.y;
@@ -215,12 +215,12 @@ export class BoxSnake {
             lastMouseY = event.y;
         }
     });
-    
+
     mouse.on("mousemove", (event) => {
       if (isMouseDown) {
           const deltaX = event.x - lastMouseX; 
           const deltaY = event.y - lastMouseY; 
-  
+
           if (deltaX > 0) {
               rotationDirection.set(0, -10, 0); 
               smallBox.translateLocal(movePosition, 0, 0); 
@@ -234,14 +234,14 @@ export class BoxSnake {
               rotationDirection.set(20, 0, 0); 
               smallBox.translateLocal(0, movePosition, 0); 
           }
-  
+
           lastMouseX = event.x;
           lastMouseY = event.y;
       }
   });
-  
-    mouse.on("mouseup", () => {
-        isMouseDown = true;
+
+  mouse.on("mouseup", () => {
+        isMouseDown = true;  
     });
     
       this.gameCreated = true;
