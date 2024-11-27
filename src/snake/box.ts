@@ -241,7 +241,7 @@ export class BoxSnake {
   });
 
   mouse.on("mouseup", () => {
-        isMouseDown = true;  
+        isMouseDown = false;  
     });
     
       this.gameCreated = true;
