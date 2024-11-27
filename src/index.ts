@@ -1,12 +1,12 @@
 import "./template/systems/overrides/index";
 
-import { Game } from "./game";
 
 import "./template/systems/overrides/playcanvas.d";
+import { Game } from "./game";
 import { GameConstant } from "./gameConstant";
 import { GamePads, log } from "playcanvas";
 import { Rotate } from "./h5-game/scripts/components/rotate";
-import { BoxSnake, Hello } from "./snake/box";
+import { BoxSnake } from "./snake/box";
 import { Editor } from "./playcanvas/editor";
 import { MiniStat } from "./playcanvas/miniStats";
 import { SpineBoy } from "./playcanvas/spineboy";

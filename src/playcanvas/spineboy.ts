@@ -117,3 +117,73 @@ export class SpineBoy {
         });
     }
 }
+
+// var BoxGrid = pc.createScript('boxGrid');
+
+// // Tạo một mặt phẳng với lưới ô vuông
+// BoxGrid.prototype.createFace = function(parent, rows, cols, width, height, position, rotation) {
+//     var cellWidth = width / cols;
+//     var cellHeight = height / rows;
+
+//     for (var row = 0; row < rows; row++) {
+//         for (var col = 0; col < cols; col++) {
+//             // Tạo ô
+//             var cell = new pc.Entity();
+//             cell.addComponent('model', {
+//                 type: 'plane'
+//             });
+
+//             // Tạo material cơ bản
+//             var material = new pc.StandardMaterial();
+//             material.diffuse.set(Math.random(), Math.random(), Math.random()); // Màu ngẫu nhiên
+//             material.update();
+//             cell.model.material = material;
+
+//             // Đặt kích thước và vị trí ô
+//             cell.setLocalScale(cellWidth, cellHeight, 1);
+//             cell.setLocalPosition(
+//                 col * cellWidth - width / 2 + cellWidth / 2,
+//                 row * cellHeight - height / 2 + cellHeight / 2,
+//                 0
+//             );
+
+//             // Gắn vào mặt cha
+//             parent.addChild(cell);
+//         }
+//     }
+
+//     // Đặt vị trí và xoay mặt
+//     parent.setLocalPosition(position.x, position.y, position.z);
+//     parent.setLocalEulerAngles(rotation.x, rotation.y, rotation.z);
+// };
+
+// // Tạo hình hộp với 6 mặt
+// BoxGrid.prototype.initialize = function() {
+//     var rows = 8, cols = 8;  // 8x8 ô
+//     var size = 4;  // Kích thước mỗi mặt (4x4 units)
+
+//     // Tạo 6 mặt
+//     var faces = [
+//         { pos: { x: 0, y: 0, z: size / 2 }, rot: { x: 0, y: 0, z: 0 } }, // Front
+//         { pos: { x: 0, y: 0, z: -size / 2 }, rot: { x: 0, y: 180, z: 0 } }, // Back
+//         { pos: { x: -size / 2, y: 0, z: 0 }, rot: { x: 0, y: 90, z: 0 } }, // Left
+//         { pos: { x: size / 2, y: 0, z: 0 }, rot: { x: 0, y: -90, z: 0 } }, // Right
+//         { pos: { x: 0, y: size / 2, z: 0 }, rot: { x: -90, y: 0, z: 0 } }, // Top
+//         { pos: { x: 0, y: -size / 2, z: 0 }, rot: { x: 90, y: 0, z: 0 } }  // Bottom
+//     ];
+
+//     for (var i = 0; i < faces.length; i++) {
+//         var face = new pc.Entity();
+//         this.app.root.addChild(face);
+
+//         this.createFace(
+//             face,
+//             rows,
+//             cols,
+//             size,
+//             size,
+//             faces[i].pos,
+//             faces[i].rot
+//         );
+//     }
+// };

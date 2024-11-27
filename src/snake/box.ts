@@ -17,6 +17,14 @@ import {
   KEY_RIGHT,
   KEY_DOWN,
   KEY_UP,
+  Vec3,
+  createScript,
+  Ray,
+  BoundingBox,
+  EVENT_MOUSEDOWN,
+  MOUSEBUTTON_LEFT,
+  EVENT_MOUSEUP,
+  EVENT_MOUSEMOVE,
 } from "playcanvas";
 const FACES = {
   FRONT: 'front',
@@ -26,6 +34,7 @@ const FACES = {
   TOP: 'top',
   BOTTOM: 'bottom'
 };
+      
 export class BoxSnake {
   static canvas: HTMLCanvasElement;
   static app: Application;
@@ -36,7 +45,6 @@ export class BoxSnake {
   static isPaused: boolean;
   
   static async load() {
-      // Create canvas element
       this.canvas = document.createElement("canvas");
       this.canvas.id = "application-canvas";
       document.body.appendChild(this.canvas);
@@ -62,7 +70,7 @@ export class BoxSnake {
       if (platform.touch) {
           this.app.touch = new TouchDevice(this.canvas);
       }
-
+  
       this.app.graphicsDevice.maxPixelRatio = Math.min(window.devicePixelRatio, 2);
       this.app.setCanvasFillMode(FILLMODE_FILL_WINDOW);
       this.app.setCanvasResolution(RESOLUTION_AUTO);
@@ -76,44 +84,63 @@ export class BoxSnake {
   }
 
   static create(): void {
-      const box = new Entity("cube");
-      box.addComponent("render", { type: "box" });
-      this.app.root.addChild(box);
-      
-      const material = new StandardMaterial();
-      material.opacity = 0.5; 
-      material.blendType = BLEND_NORMAL; 
-      box.render.material = material;
-      this.app.root.addChild(box);
+    const box = new Entity("cube");
+    box.addComponent("render", { type: "box" });
+    this.app.root.addChild(box);
 
-      const boxScale = 1;
-      box.setLocalScale(boxScale, boxScale, boxScale);
+    const material = new StandardMaterial();
+    material.opacity = 0.5;
+    material.blendType = BLEND_NORMAL;
+    box.render.material = material;
+    const boxScale = 1;
+    box.setLocalScale(boxScale, boxScale, boxScale);
 
-      const smallBox = new Entity("smallCube");
-      smallBox.addComponent("render", { type: "box"});
-      const smallBoxScale = boxScale / 8; 
-      smallBox.setLocalScale(smallBoxScale, smallBoxScale, smallBoxScale);
+    const smallBox = new Entity("smallCube");
+    smallBox.addComponent("render", { type: "box" });
+    smallBox.addComponent("script");
+    const smallBoxScale = boxScale / 8;
+    smallBox.setLocalScale(smallBoxScale, smallBoxScale, smallBoxScale);
+    smallBox.setLocalPosition(0, 0, 0);  
+    const smallBoxMaterial = new StandardMaterial();
+    smallBoxMaterial.diffuse = new Color(1, 1, 0);
+    smallBox.render.material = smallBoxMaterial;
+    box.addChild(smallBox); 
 
-      smallBox.setLocalPosition(0, 0, 0);
+    const randomBox = new Entity("randomSmallCube");
+    randomBox.addComponent("render", { type: "box" });
+    randomBox.setLocalScale(smallBoxScale, smallBoxScale, smallBoxScale);
+    const randomBoxMaterial = new StandardMaterial();
+    randomBoxMaterial.diffuse = new Color(1, 0, 0);
+    randomBox.render.material = randomBoxMaterial;
 
-      this.app.root.addChild(smallBox);
+    const maxOffset = boxScale / 2 - smallBoxScale / 2;
 
-      const randomBox = new Entity("randomSmallCube");
-      randomBox.addComponent("render", { type: "box" });
-      randomBox.setLocalScale(smallBoxScale, smallBoxScale, smallBoxScale);
-  
-      const randomBoxMaterial = new StandardMaterial();
-      randomBoxMaterial.diffuse = new Color(1, 0, 0);
-      randomBox.render.material = randomBoxMaterial;
-  
-      const maxOffset = boxScale / 2 - smallBoxScale / 2; 
-      const randomX = (Math.random() * 2 - 1) * maxOffset;
-      const randomY = (Math.random() * 2 - 1) * maxOffset;
-      const randomZ = (Math.random() * 2 - 1) * maxOffset;
-      randomBox.setLocalPosition(randomX, randomY, randomZ);
-  
-      this.app.root.addChild(randomBox);
+    const randomFace = Object.values(FACES)[Math.floor(Math.random() * 6)];
 
+    let randomX = 0, randomY = 0, randomZ = 0;
+    switch(randomFace) {
+      case FACES.FRONT:
+        randomZ = maxOffset;  
+        break;
+      case FACES.BACK:
+        randomZ = -maxOffset; 
+        break;
+      case FACES.LEFT:
+        randomX = -maxOffset; 
+        break;
+      case FACES.RIGHT:
+        randomX = maxOffset;  
+        break;
+      case FACES.TOP:
+        randomY = maxOffset;  
+        break;
+      case FACES.BOTTOM:
+        randomY = -maxOffset; 
+        break;
+    }
+
+    randomBox.setLocalPosition(randomX, randomY, randomZ);
+    box.addChild(randomBox);
 
       const camera = new Entity("camera");
       camera.addComponent("camera", { clearColor: new Color(0, 0, 0) });
@@ -125,49 +152,107 @@ export class BoxSnake {
       this.app.root.addChild(light);
       light.setEulerAngles(45, 0, 0);
       
-
-      const keyboard = new Keyboard(document.body);
-      const movePosition = 0.015;
       const boundary = boxScale / 2 - smallBoxScale / 2;
-      this.app.on('update', function(dt) {
-        if (keyboard.isPressed(KEY_DOWN)){
-          box.rotate(-20 * dt, 0, 0);
-          smallBox.translateLocal(0, -movePosition, 0);
-        }
-        if (keyboard.isPressed(KEY_UP)){
-          box.rotate(20 * dt, 0, 0);
-          smallBox.translateLocal(0, movePosition, 0);
-        }
-        if (keyboard.isPressed(KEY_LEFT)){
-          box.rotate(0, 20 * dt, 0);
-          smallBox.translateLocal(-movePosition, 0, 0);
-        }
-        if (keyboard.isPressed(KEY_RIGHT)){
-          box.rotate(0, -20 * dt, 0);
-          smallBox.translateLocal(movePosition, 0, 0);
-        }
+      let currentFace = FACES.FRONT; 
+      const keyboard = new Keyboard(document.body);
+      const mouse = new Mouse(this.canvas);
+      const movePosition = 0.015;
+      let isMouseDown = false;
+      let mouseStartX = 0;
+      let mouseStartY = 0;
+      let lastMouseX = 0;
+      let lastMouseY = 0;
+      const rotationDirection = new Vec3(0, 0, 0);
 
+      this.app.on('update', function(dt) {
+        if (keyboard.isPressed(KEY_DOWN)) {
+          rotationDirection.set(-20, 0, 0); 
+      } else if (keyboard.isPressed(KEY_UP)) {
+          rotationDirection.set(20, 0, 0); 
+      } else if (keyboard.isPressed(KEY_LEFT)) {
+          rotationDirection.set(0, 10, 0); 
+      } else if (keyboard.isPressed(KEY_RIGHT)) {
+          rotationDirection.set(0, -10, 0); 
+      }
+      if (rotationDirection.lengthSq() > 0) { 
+        box.rotate(rotationDirection.x * dt, rotationDirection.y * dt, rotationDirection.z * dt);
+    }
+
+        if (keyboard.isPressed(KEY_LEFT)) {
+          smallBox.translateLocal(-movePosition, 0, 0); 
+        }
+        if (keyboard.isPressed(KEY_RIGHT)) {
+          smallBox.translateLocal(movePosition, 0, 0); 
+        }
+        if (keyboard.isPressed(KEY_UP)) {
+          smallBox.translateLocal(0, movePosition, 0); 
+        }
+        if (keyboard.isPressed(KEY_DOWN)) {
+          smallBox.translateLocal(0, -movePosition, 0); 
+        }
+      
         const position = smallBox.getLocalPosition();
         if (position.x > boundary) {
             smallBox.setLocalPosition(boundary, position.y, position.z);
-            box.rotate(0, -90, 0);
         } else if (position.x < -boundary) { 
             smallBox.setLocalPosition(-boundary, position.y, position.z);
-            box.rotate(0, 90, 0);
         } else if (position.y > boundary) {
             smallBox.setLocalPosition(position.x, boundary, position.z);
-            box.rotate(-90, 0, 0);
         } else if (position.y < -boundary) {
             smallBox.setLocalPosition(position.x, -boundary, position.z);
-            box.rotate(90, 0, 0);
         } else if (position.z > boundary) {
             smallBox.setLocalPosition(position.x, position.y, boundary);
         } else if (position.z < -boundary) {
             smallBox.setLocalPosition(position.x, position.y, -boundary);
-        }
+        } 
       });
+      mouse.on("mousedown", (event) => {
+        if (event.button === 0) { 
+            isMouseDown = true;
+            mouseStartX = event.x;
+            mouseStartY = event.y;
+            lastMouseX = event.x;
+            lastMouseY = event.y;
+        }
+    });
+    
+    mouse.on("mousemove", (event) => {
+      if (isMouseDown) {
+          const deltaX = event.x - lastMouseX; 
+          const deltaY = event.y - lastMouseY; 
+  
+          if (deltaX > 0) {
+              rotationDirection.set(0, -10, 0); 
+              smallBox.translateLocal(movePosition, 0, 0); 
+          } else if (deltaX < 0) { 
+              rotationDirection.set(0, 10, 0);
+              smallBox.translateLocal(-movePosition, 0, 0);  
+          } else if (deltaY > 0) {
+            rotationDirection.set(-20, 0, 0); 
+              smallBox.translateLocal(0, -movePosition, 0);
+          } else if (deltaY < 0) {
+              rotationDirection.set(20, 0, 0); 
+              smallBox.translateLocal(0, movePosition, 0); 
+          }
+  
+          lastMouseX = event.x;
+          lastMouseY = event.y;
+      }
+  });
+  
+    mouse.on("mouseup", () => {
+        isMouseDown = true;
+    });
+    
       this.gameCreated = true;
-  }
+    }
+  
+    static setRandomPosition(entity, maxOffset) {
+      const randomX = (Math.random() * 2 - 1) * maxOffset;
+      const randomY = (Math.random() * 2 - 1) * maxOffset;
+      const randomZ = (Math.random() * 2 - 1) * maxOffset;
+      entity.setLocalPosition(randomX, randomY, randomZ);
+    }
 
   static handleKeyboardInput(){
   }
@@ -190,3 +275,5 @@ document.addEventListener("visibilitychange", () => {
 
 window.addEventListener("focus", () => BoxSnake.setPause(false));
 window.addEventListener("blur", () => BoxSnake.setPause(true));
+
+
